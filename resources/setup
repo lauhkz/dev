@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
-sudo apt -y update
+sudo pacman -Syu --no-confirm
 
 if ! command -v git &> /dev/null; then
-    sudo apt -y install git
+    sudo pacman -S git --no-confirm
 fi
 
-if [ ! -d $HOME/personal ]; then
-    mkdir $HOME/personal
+if [ ! -d $HOME/repos ]; then
+    mkdir $HOME/repos
 fi
 
-git clone https://github.com/ThePrimeagen/dev $HOME/personal/dev
+git clone https://github.com/lauhkz/dev $HOME/repos/dev
 
-pushd $HOME/personal/dev
+pushd $HOME/repos/dev
 ./run
 popd

@@ -2,3 +2,5 @@
 main
 /Emojicode-1.0-beta.2-Linux-x86_64/
 ascii/
+env/.config/emacs/straight/
+

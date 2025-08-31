@@ -1,0 +1,95 @@
+;;; init.el --- Initialization -*- lexical-binding: t; -*-
+(setq debug-on-error t)
+(defvar bootstrap-version)
+(let ((bootstrap-file
+       (expand-file-name
+        "straight/repos/straight.el/bootstrap.el"
+        (or (bound-and-true-p straight-base-dir)
+            user-emacs-directory)))
+      (bootstrap-version 7))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+        (url-retrieve-synchronously
+         "https://raw.githubusercontent.com/radian-software/straight.el/develop/install.el"
+         'silent 'inhibit-cookies)
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessage))
+
+(straight-use-package 'use-package)
+
+(setq straight-use-package-by-default t)
+
+(defvar user-full-name "L. Leguizamon")
+(use-package nerd-icons
+  :ensure t
+  :custom
+  ;; Set the Nerd Font family to use in GUI Emacs.
+  (nerd-icons-font-family "Symbols Nerd Font Mono"))
+
+; (TODO for some day) fix this dashboard thing
+  ; (use-package welcome-dashboard
+  ;   :straight (
+  ;   :host github
+  ;   :repo "konrad1977/welcome-dashboard"
+  ;   :files ("welcome-dashboard.el")
+  ;   :ensure t
+  ;   :after nerd-icons
+  ;   )
+  ;   :demand
+  ;   :init
+  ;   (setq welcome-dashboard-use-nerd-icons t
+  ;       welcome-dashboard-latitude nil
+  ;       welcome-dashboard-longitude nil
+  ;         welcome-dashboard-path-max-length 75
+  ;         welcome-dashboard-show-file-path t 
+  ;         welcome-dashboard-min-left-padding 10
+  ;         welcome-dashboard-image-file "~/.config/emacs/themes/minimal_emacs.png"
+  ;         welcome-dashboard-image-width 200
+  ;         welcome-dashboard-max-number-of-todos 5
+  ;         welcome-dashboard-image-height 169
+  ;         welcome-dashboard-title (concat "Welcome " user-full-name))
+  ;   :config
+  ;   (welcome-dashboard-create-welcome-hook))
+
+
+(use-package autothemer
+		:ensure t)
+
+(setq custom-safe-themes t)
+
+(load-theme 'automata)
+;; use-package with package.el:
+(use-package dashboard
+  :ensure t
+  :config
+  (dashboard-setup-startup-hook))
+
+(use-package evil
+  :demand t
+  :init
+  (setq evil-want-integration t
+        evil-want-keybinding nil
+        evil-want-C-u-scroll t
+        evil-want-Y-yank-to-eol t
+        evil-split-window-below t
+        evil-vsplit-window-right t
+        evil-respect-visual-line-mode t
+        evil-undo-system 'undo-tree)
+  :config
+  (evil-mode 1))
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   '("df782d1d31bc53de4034dacf7dbf574bf7513df8104486738a9b425693451eba"
+     default)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

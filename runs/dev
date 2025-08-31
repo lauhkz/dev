@@ -3,15 +3,15 @@
 paru -S --noconfirm --needed gimp tldr go fzf rofi-wayland btop bc stylua node npm
 go install github.com/air-verse/air@latest
 paru -S love --noconfirm --needed
-paru -S ttf-font-awesome waybar ttf-jetbrains-mono-nerd ttf-nerd-fonts-symbols
+paru -S ttf-font-awesome ttf-iosevka-term-ss18 ttf-jetbrains-mono-nerd ttf-nerd-fonts-symbols
 paru -S hyprlock --noconfirm --needed
 paru -S ghostty
-paru -S hyprpaper hyprshot
+paru -S hyprshot
 paru -Syu wlogout-git --noconfirm --needed
 
 paru -S ffmpeg aalib ascii-image-converter-bin --noconfirm
-curl -sSfL https://get.tur.so/install.sh | bash
+#curl -sSfL https://get.tur.so/install.sh | bash
 
 # cloudflare stuff
-paru -S cloudflared
-paru -S dosfstools
+# paru -S cloudflared
+# paru -S dosfstools
