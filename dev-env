@@ -76,7 +76,7 @@ pushd $DEV_ENV/daydream &> /dev/null
 popd &> /dev/null
 
 mkdir -p $HOME/.local/bin
-copy $DEV_ENV/daydream/opencode-client $HOME/.local/bin/opencode-client
-copy $DEV_ENV/daydream/opencode-server $HOME/.local/bin/opencode-server
-
-hyprctl reload
+# copy $DEV_ENV/daydream/opencode-client $HOME/.local/bin/opencode-client
+# copy $DEV_ENV/daydream/opencode-server $HOME/.local/bin/opencode-server
+ 
+# hyprctl reload

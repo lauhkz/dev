@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
-paru -S --noconfirm --needed gimp tldr go fzf rofi-wayland btop bc stylua node npm
+paru -S --noconfirm --needed gimp tldr go fzf rofi-wayland btop bc stylua node npm greetd-tuigreet-git 
 go install github.com/air-verse/air@latest
 paru -S love --noconfirm --needed
 paru -S ttf-font-awesome ttf-iosevka-term-ss18 ttf-jetbrains-mono-nerd ttf-nerd-fonts-symbols
-paru -S hyprlock --noconfirm --needed
 paru -S ghostty
 paru -S hyprshot
 paru -Syu wlogout-git --noconfirm --needed
