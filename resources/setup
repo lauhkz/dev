@@ -10,7 +10,7 @@ git clone https://aur.archlinux.org/paru.git $HOME/paru
 cd $HOME/paru
 makepkg -si --noconfirm
 cd $HOME
-rm -r paru
+rm -rf paru
 
 if [ ! -d $HOME/repos ]; then
     mkdir $HOME/repos
