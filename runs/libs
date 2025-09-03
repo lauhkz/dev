@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-sudo pacman -Syy --no-confirm
-sudo pacman -S --no-confirm install git ripgrep pavucontrol xclip jq tldr shutter python3-pip
+sudo pacman -Syy --noconfirm
+sudo pacman -S --noconfirm install git ripgrep pavucontrol xclip jq tldr shutter python3-pip
 

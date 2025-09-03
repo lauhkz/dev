@@ -3,4 +3,4 @@
 sudo pacman -S zsh
 hash -r
 sudo chsh -s $(which zsh)
-sudo pacman -S --no-confirm starship
+sudo pacman -S --noconfirm starship
