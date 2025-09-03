@@ -3,9 +3,9 @@
 paru -S --noconfirm --needed gimp tldr go fzf rofi-wayland btop bc stylua node npm greetd-tuigreet-git 
 go install github.com/air-verse/air@latest
 paru -S love --noconfirm --needed
-paru -S ttf-font-awesome ttf-iosevka-term-ss18 ttf-jetbrains-mono-nerd ttf-nerd-fonts-symbols
-paru -S ghostty
-paru -S hyprshot
+paru -S ttf-font-awesome ttf-iosevka-term-ss18 ttf-jetbrains-mono-nerd ttf-nerd-fonts-symbols --noconfirm
+paru -S ghostty --noconfirm
+paru -S hyprshot --noconfirm
 paru -Syu wlogout-git --noconfirm --needed
 
 paru -S ffmpeg aalib ascii-image-converter-bin --noconfirm
