@@ -6,11 +6,17 @@ if ! command -v git &> /dev/null; then
 fi
 
 # Installing Paru
-git clone https://aur.archlinux.org/paru.git $HOME/paru
-cd $HOME/paru
-makepkg -si --noconfirm
-cd $HOME
-rm -rf paru
+
+if [ ! -d $HOME/paru ]; then
+	git clone https://aur.archlinux.org/paru.git $HOME/paru
+fi
+
+if ! command -v paru &> /dev/null; then
+	cd $HOME/paru
+	makepkg -si --noconfirm
+	cd $HOME
+	rm -rf paru
+fi
 
 if [ ! -d $HOME/repos ]; then
     mkdir $HOME/repos

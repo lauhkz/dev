@@ -1,0 +1,7 @@
+vim.keymap.set('n', '<leader>o', ':update<CR> :source<CR>')
+vim.keymap.set('n', '<leader>tn', ':tabNext<CR>')
+vim.keymap.set({ 'n', 'v', 'x' }, '<leader>y', '"+y<CR>')
+vim.keymap.set({ 'n', 'v', 'x' }, '<leader>d', '"+d<CR>')
+vim.keymap.set({ 'n', 'v', 'x' }, '<leader>s', ':e #<CR>')
+vim.keymap.set({ 'n', 'v', 'x' }, '<leader>S', ':sf #<CR>')
+vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
